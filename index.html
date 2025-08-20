@@ -1,23 +1,57 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR"> <!-- Define a linguagem da página -->
 <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE-edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Little Princess</title>
+    <meta charset="UTF-8"> <!-- Codificação de caracteres UTF-8 -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"> <!-- Compatibilidade com IE -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Responsividade -->
+
+    <title>AnimeQ</title> <!-- Título da aba -->
+
+    <!-- Importação da fonte Montserrat -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googlesapis.com/css2?family=Montserrat:wght@500;600&display=swap" rel="stylesheet">
-    <link rel="icon" type="image/png" href="imagens/dowload (1).jpeg">
-    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600&display=swap" rel="stylesheet">
+
+    <!-- Ícone da aba -->
+    <link rel="icon" type="image/png" href="img/4043233-anime-away-face-no-nobody-spirited_113254.png">
+
+    <!-- Reset de estilos e CSS principal -->
     <link rel="stylesheet" href="reset.css">
-    
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>Efeitos Sonoros</h1>
-    <h2>Princesas</h2>
+
+    <!-- Título principal -->
+    <h1>Aberturas de animes</h1>
+
+    <!-- Container das teclas -->
     <section class="teclado">
-        <button class="tecla Merida"><img src="imagens/Merida_disney.png"></button>
+        <!-- Cada botão contém uma imagem ilustrativa -->
+        <button class="tecla tecla_som1"><img src="./img/Belletransparent.webp" alt="Som 1"></button>
+        <button class="tecla tecla_som2"><img src="./img/download (1).jpeg" alt="Som 2"></button>
+        <button class="tecla tecla_som3"><img src="./img/Merida_disney.png" alt="Som 3"></button>
 
+        <button class="tecla tecla_som4"><img src="./img/Moana_Waialiki2.webp" alt="Som 4"></button>
+        <button class="tecla tecla_som5"><img src="./img/MulanRedesign.webp" alt="Som 5"></button>
+        <button class="tecla tecla_som6"><img src="./img/princesas-disney-fundo-transparente27.png" alt="Som 6"></button>
 
-        
+        <button class="tecla tecla_som7"><img src="./img/princesas-disney-fundo-transparente42-150x220.png" alt="Som 7"></button>
+        <button class="tecla tecla_som8"><img src="./img/Tiana.webp" alt="Som 8"></button>
+        <button class="tecla tecla_som9"><img src="./img/Tumblr_o1xpveBV601v56ooio1_500.webp" alt="Som 9"></button>
+    </section>
+
+    <!-- Áudios correspondentes aos botões -->
+    <audio src="./song/A Pequena Sereia_ Parte do Seu Mundo.mp3" id="som_a"></audio>
+    <audio src="./song/Alguma Coisa Acontece  com letra  A Bela e a Fera.mp3"   id="som_tecla_som2"></audio>
+    <audio src="./song/Any Gabrielly - Saber Quem Sou (De Moana).mp3" id="som_tecla_som3"></audio>
+    <audio src="./song/Bibidi-Bobidi-Bu  com letra  Cinderela.mp3" id="som_tecla_som4"></audio>
+    <audio src="./song/Era Uma Vez No Sonho _ com letra _ A Bela Adormecida [5ZuhwC5tdbQ].mp3" id="som_tecla_som5"></audio>
+    <audio src="./song/Kacau Gomes - Quase Lá (Almost There) (De _A Princesa e o Sapo__Vídeo oficial) [sP47iA0tJ-0].mp3" id="som_tecla_som6"></audio>
+    <audio src="./song/som7.mp3""id="som_tecla_som3">"</audio>
+    <audio src="./song/som8.mp3" id="som_tecla_som3"></audio>
+    <audio src="./song/som9.mp3" id="som_tecla_som9"></audio>
+
+    <!-- Script principal -->
+    <script src="main.js"></script>
+</body>
+</html>

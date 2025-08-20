@@ -1,29 +1,93 @@
-:root{
-    --cinza:#aaa;
-    --vermelho:red;
-    --vermelho-escuro:rgb(92,6,6);
-    --branca:white;
-    --luz:rgb(93,89,89);
-   
+/* Definição de variáveis globais de cores */
+:root {
+  --cinza: #100f0f;               /* Cinza usado em sombras */
+  --vermelha: #7932dc;         /* Vermelho principal */
+  --vermelha-escura: #1d1d64;  /* Vermelho mais escuro para efeito */
+  --branca: #fff;              /* Branco */
+  --luz: #478098;              /* Cor de luz (rosa claro) */
 }
-body{
-    align-items: center;
-    background-color: var(--vermelho-escuro);
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    justify-content: center;
-    font-family: 'Montserrat', sans-serif;
-    min-height: 100vh; 
 
+/* Estilos gerais do body */
+body {
+  align-items: center; /* Centraliza os elementos verticalmente */
+  background: url(./img/pngtree-stars-five-pointed-star-wallpaper-background-blue-picture-image_1310527.jpg) no-repeat center center fixed; 
+  background-size: cover;   /* Ajusta a imagem para cobrir toda a tela sem distorcer */
+  display: flex;            /* Layout flexível */
+  justify-content: center;  /* Centraliza horizontalmente */
+  flex-direction: column;   /* Alinha os itens em coluna */
+  font-family: 'Montserrat', sans-serif; /* Define a fonte */
+  min-height: 100vh;        /* Altura mínima igual à tela */
 }
+
+
+/* Estilo do título principal */
 h1 {
-    color: var(--branca);
-    margin-bottom: 20px;
-    font-size: 2rem;
+  color: var(--branca);   /* Cor branca */
+  margin-bottom: 20px;    /* Espaço inferior */
+  font-size: 2rem;        /* Tamanho da fonte */
 }
 
+/* Estilo do subtítulo */
 h2 {
-    color: var(--branca);
-    margin-bottom: 20px;
-    font-size: 1.5rem;}
+  color: var(--branca);   /* Cor branca */
+  margin-bottom: 20px;    /* Espaço inferior */
+  font-size: 1.5rem;      /* Tamanho da fonte */
+}
+
+/* Container do teclado */
+.teclado {
+  background: linear-gradient(to bottom, #080808 0%,#2d2d2d 100%); /* Fundo em degradê cinza */
+  box-shadow: 6px 8px 0 6px #373636, 10px 10px 10px #000;             /* Sombra externa */
+  border-radius: 30px;                                             /* Bordas arredondadas */
+  display: grid;                                                   /* Layout em grid */
+  gap: 10px;                                                       /* Espaçamento entre botões */
+  grid-template-columns: repeat(3, 1fr);                           /* 3 colunas iguais */
+  padding: 10px;                                                   /* Espaçamento interno */
+}
+
+/* Estilo dos botões (teclas) */
+.tecla {
+  background-color: var(--branca);   /* Fundo branco */
+  border-radius: 30px;               /* Bordas arredondadas */
+  box-shadow: 3px 3px 0 var(--cinza);/* Sombra leve */
+  color: var(--vermelha);            /* Texto em vermelho */
+  cursor: pointer;                   /* Cursor tipo "mãozinha" */
+  height: 160px;                     /* Altura fixa */
+  font-size: 1.75em;                  /* Tamanho do texto */
+  font-weight: bold;                  /* Negrito */
+  line-height: 120px;                 /* Centraliza verticalmente o texto */
+  text-align: center;                 /* Centraliza horizontalmente o texto */
+  width: 160px;                       /* Largura fixa */
+}
+
+/* Padroniza as imagens dentro dos botões */
+.tecla img {
+  width: 100%;            /* Faz a imagem ocupar toda a largura do botão */
+  height: 100%;           /* Faz a imagem ocupar toda a altura do botão */
+  object-fit: cover;      /* Recorta proporcionalmente sem distorcer */
+  border-radius: 30px;    /* Mantém o mesmo arredondamento do botão */
+}
+
+
+/* Estilo quando a tecla é clicada/ativa */
+.tecla.ativa,
+.tecla:active {
+  background-color: var(--vermelha);         /* Fundo vermelho */
+  border: 4px solid  var(--vermelha);        /* Borda vermelha */
+  box-shadow: 3px 3px 0 var(--vermelha-escura) inset; /* Sombra interna */
+  color: var(--branca);                      /* Texto branco */
+  outline: none;                             /* Remove borda padrão */
+}
+
+/* Estilo quando a tecla recebe foco */
+.tecla.focus,
+.tecla:focus {
+  outline: none;                        /* Remove contorno */
+  box-shadow: 1px 1px 10px var(--luz);  /* Adiciona brilho */
+}
+
+/* Estilo quando ativa + foco ao mesmo tempo */
+.tecla.ativa:focus,
+.tecla:active:focus {
+  box-shadow: 3px 3px 0 var(--vermelha-escura) inset, 1px 1px 10px var(--luz); /* Sombra interna + brilho */
+}
